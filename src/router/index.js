@@ -4,6 +4,7 @@ import Order from '@/views/Order.vue';
 import Loyalty from '@/views/loyalty.vue';
 import Details from '@/views/food-detail.vue';
 import Summary from '@/views/checkout-detail.vue';
+import Receipt from '@/views/receipt.vue';
 const routes = [
   {
     path: "/",
@@ -28,6 +29,10 @@ const routes = [
   {
     path: "/order/summary",
     component: Summary,
+  },
+  {
+    path: "/order/success",
+    component: Receipt,
   },
 ];
 

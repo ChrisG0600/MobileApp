@@ -1,8 +1,6 @@
 <template>
   <ion-app>
-    <ion-router-outlet aria-hidden="true">
-      <router-view />
-    </ion-router-outlet>
+    <ion-router-outlet :key="$route.fullPath"></ion-router-outlet>
   </ion-app>
 </template>
 
@@ -13,8 +11,8 @@ export default {
   name: 'App',
   components: {
     IonApp,
-    IonRouterOutlet,
-  },
+    IonRouterOutlet
+  }
 };
 </script>
 

@@ -19,7 +19,7 @@
           <ion-icon class="heart" src="/assets/icons/heart.svg"></ion-icon>
         </div>
       </div>
-      <h5 class="title">Teriyaki Ramen</h5>
+      <h5 class="title">Kur Ramen</h5>
       <ion-icon class="rating" src="https://upload.wikimedia.org/wikipedia/commons/4/47/Rating_stars_4.5.svg"></ion-icon>
       <div class="description">
         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur 
@@ -126,7 +126,7 @@
           <h5 class="modal-title">Successfully Added!</h5>
           <p class="subtitle">What do you want to do now?</p>
           <ion-button class="check-out" @click="summary">Proceed to Checkout</ion-button>
-          <p class="add-more" @click="setOpen(false)">Add More</p>
+          <p class="add-more" @click="setOpen(false, '/order')">Add More</p>
         </div>
       </ion-content>
     </ion-modal>
@@ -162,27 +162,26 @@ export default defineComponent({
   
   setup(){
     const ionRouter = useIonRouter();
-    const modalRef = ref();
     const isOpen = ref(false);
 
-    const setOpen = (open) => {
+    const setOpen = (open, route = '/order') => {
       isOpen.value = open;
       if (!open) {
-      ionRouter.replace('/order');
+        ionRouter.replace(route);
       }
     };
+
     
     const goback = () => {
-      ionRouter.replace('/Order');
+      ionRouter.replace('/order');
     };
 
     const summary = () => {
-      ionRouter.replace('/order/summary');
+      setOpen(false, '/order/summary');
     };
 
     return {
       goback,
-      modalRef,
       summary,
       isOpen,
       setOpen

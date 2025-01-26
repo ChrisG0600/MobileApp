@@ -7,18 +7,13 @@
           <ion-avatar>
             <img alt="Profile Picture" src="/assets/images/profile.jpg" />
           </ion-avatar>
-          <ion-menu-toggle>
-            <ion-buttons>
-              <ion-icon class="crown-svg" src="/assets/icons/crown.svg"></ion-icon>
-              <p>
-                0 Pointss
-              </p>      
-            </ion-buttons>
-          </ion-menu-toggle>
-
-          <ion-menu-toggle>
-            <ion-icon class="back-button" src="/assets/icons/back.svg"></ion-icon>
-          </ion-menu-toggle>    
+          <ion-buttons @click="loyaltypage">
+            <ion-icon class="crown-svg" src="/assets/icons/crown.svg"></ion-icon>
+            <p>
+              0 Points
+            </p>      
+          </ion-buttons>
+          <ion-icon class="back-button" src="/assets/icons/back.svg"></ion-icon>
         </div>
         <div class="info">
           <h2 class="fullname">Chou Tzuyu</h2>
@@ -30,39 +25,26 @@
       <ion-content scroll-y="false">
         <div class="icon-wrapper">
           <ion-icon class="icon-link" src="/assets/icons/home.svg"></ion-icon>
-          <ion-menu-toggle>
-              <ion-buttons class="menu-link" @click="homepage">Home</ion-buttons>
-          </ion-menu-toggle>
+          <ion-buttons class="menu-link" @click="homepage">Home</ion-buttons>
         </div>
         <div class="icon-wrapper">
           <ion-icon class="icon-link" src="/assets/icons/chicken.svg"></ion-icon>
-          <ion-menu-toggle>
-              <ion-buttons class="menu-link" @click="orderpage">Order Now!</ion-buttons>
-          </ion-menu-toggle>          
+            <ion-buttons class="menu-link" @click="orderpage">Order Now!</ion-buttons>
         </div>
-
         <div class="icon-wrapper">
           <ion-icon class="icon-link" src="/assets/icons/bell.svg"></ion-icon>
           <div class="wrapper">
-            <ion-menu-toggle>
-              <ion-buttons class="menu-link">Notifications</ion-buttons>
-            </ion-menu-toggle>
+            <ion-buttons class="menu-link">Notifications</ion-buttons>
             <p class="count">4</p>
           </div>          
         </div>
-
         <div class="icon-wrapper">
           <ion-icon class="icon-link" src="/assets/icons/pin.svg"></ion-icon>
-          <ion-menu-toggle>
-              <ion-buttons class="menu-link">Store Locator</ion-buttons>
-          </ion-menu-toggle>
+            <ion-buttons class="menu-link">Store Locator</ion-buttons>
         </div>
-
         <div class="icon-wrapper">
           <ion-icon class="icon-link" src="/assets/icons/question-mark.svg"></ion-icon>
-          <ion-menu-toggle>
-              <ion-buttons class="menu-link">FAQ's</ion-buttons>
-          </ion-menu-toggle>
+            <ion-buttons class="menu-link">FAQ's</ion-buttons>
         </div>
 
         <div class="link-separator"></div>
@@ -70,39 +52,29 @@
         <div class="icon-wrapper">
           <ion-icon class="icon-link" src="/assets/icons/cart.svg"></ion-icon>
           <div class="wrapper">
-            <ion-menu-toggle>
-              <ion-buttons class="menu-link">My Orders</ion-buttons>
-            </ion-menu-toggle>
+            <ion-buttons class="menu-link">My Orders</ion-buttons>
             <p class="count">2</p>          
           </div>
         </div>
 
         <div class="icon-wrapper">
           <ion-icon class="icon-link" src="/assets/icons/profile.svg"></ion-icon>
-          <ion-menu-toggle>
-              <ion-buttons class="menu-link">My Account</ion-buttons>
-          </ion-menu-toggle>
+          <ion-buttons class="menu-link">My Account</ion-buttons>
         </div>
 
         <div class="icon-wrapper">
           <ion-icon class="icon-link" src="/assets/icons/heart.svg"></ion-icon>
-          <ion-menu-toggle>
-              <ion-buttons class="menu-link">My Favorites</ion-buttons>
-          </ion-menu-toggle>
+          <ion-buttons class="menu-link">My Favorites</ion-buttons>
         </div>
 
         <div class="icon-wrapper">
           <ion-icon class="icon-link" src="/assets/icons/pin.svg"></ion-icon>
-          <ion-menu-toggle>
-              <ion-buttons class="menu-link">Order Tracker</ion-buttons>
-          </ion-menu-toggle>
+          <ion-buttons class="menu-link">Order Tracker</ion-buttons>
         </div>
 
         <div class="icon-wrapper">
           <ion-icon class="icon-link" src="/assets/icons/history.svg"></ion-icon>
-          <ion-menu-toggle>
-              <ion-buttons class="menu-link">Order History</ion-buttons>
-          </ion-menu-toggle>
+          <ion-buttons class="menu-link">Order History</ion-buttons>
         </div>
         <ion-button class="logout-btn">Log Out</ion-button>
       </ion-content>
@@ -311,7 +283,7 @@ ion-button{
 }
 .logout-btn{
   margin: 5px;
-  --background: rgb(211, 8, 8);
+  --background: rgb(218, 59, 59);
   --color: white;
   --border-radius: 20px;
   --padding: 5px 0;
@@ -407,7 +379,7 @@ ion-button{
   gap: 2px;
 }
 .reward-all{
-  --background: red;
+  --background: rgb(218, 59, 59);
   --color: white;
 }
 
@@ -451,7 +423,7 @@ ion-button{
 }
 .food-points{
   font-weight: bold;
-  color: red;
+  color: rgb(218, 59, 59);
   margin: 0;
 }
 </style>

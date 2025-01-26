@@ -84,9 +84,9 @@
         <ion-item>
           <div class="food-wrapper">
             <div class="food-card">
-              <ion-img class="food-image" src="/assets/images/broth.png"></ion-img>
+              <ion-img class="food-image" src="/assets/images/ramen.png"></ion-img>
               <div class="food-content">
-                <h5 class="food-title">Teriyaki Ramen</h5>
+                <h5 class="food-title">Kur Ramen</h5>
                 <p class="subtitle">1x Coke</p>
                 <p class="subtitle">1x White Rice</p>
                 <p class="subtitle">1x Broth</p>
@@ -184,7 +184,7 @@
             <h5 class="grand-total">Grand Total</h5>
             <p class="grand-total-dollars">P 227</p>
           </div>
-          <ion-button class="place-order">Place Order</ion-button>
+          <ion-button @click="receiptpage" class="place-order">Place Order</ion-button>
         </div>
       </ion-toolbar>
     </ion-footer>
@@ -192,9 +192,9 @@
 </template>
 
 <script>
-import {IonImg, IonButtons, IonIcon, IonPage, IonHeader, IonToolbar, IonTitle, IonContent,  IonItem, IonItemOption, IonItemOptions, IonItemSliding, IonLabel, IonList } from '@ionic/vue';
-
-export default {
+import {useIonRouter, IonImg, IonButtons, IonIcon, IonPage, IonHeader, IonToolbar, IonTitle, IonContent,  IonItem, IonItemOption, IonItemOptions, IonItemSliding, IonLabel, IonList } from '@ionic/vue';
+import { defineComponent } from 'vue';
+export default defineComponent ({
   name: 'Summary',
   components: {
     IonImg,
@@ -211,8 +211,22 @@ export default {
     IonItemSliding,
     IonLabel,
     IonList,
+  },
+  setup () {
+    const ionRouter = useIonRouter();
+
+    const goback = () => {
+      ionRouter.replace('/order/details');
+    };
+    const receiptpage = () => {
+      ionRouter.push('/order/success');
+    }
+    return {
+      goback,
+      receiptpage
+    }
   }
-};
+});
 </script>
 
 <style scoped>

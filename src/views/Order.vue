@@ -7,18 +7,13 @@
           <ion-avatar>
             <img alt="Profile Picture" src="/assets/images/profile.jpg" />
           </ion-avatar>
-          <ion-menu-toggle>
-            <ion-buttons router-link="/loyalty-points">
-              <ion-icon class="crown-svg" src="/assets/icons/crown.svg"></ion-icon>
-              <p>
-                0 Points
-              </p>      
-            </ion-buttons>
-          </ion-menu-toggle>
-
-          <ion-menu-toggle>
-            <ion-icon class="back-button" src="/assets/icons/back.svg"></ion-icon>
-          </ion-menu-toggle>    
+          <ion-buttons @click="loyaltypage">
+            <ion-icon class="crown-svg" src="/assets/icons/crown.svg"></ion-icon>
+            <p>
+              0 Points
+            </p>      
+          </ion-buttons>
+          <ion-icon class="back-button" src="/assets/icons/back.svg"></ion-icon>
         </div>
         <div class="info">
           <h2 class="fullname">Chou Tzuyu</h2>
@@ -30,39 +25,26 @@
       <ion-content scroll-y="false">
         <div class="icon-wrapper">
           <ion-icon class="icon-link" src="/assets/icons/home.svg"></ion-icon>
-          <ion-menu-toggle>
-              <ion-buttons class="menu-link" router-link="/">Home</ion-buttons>
-          </ion-menu-toggle>
+          <ion-buttons class="menu-link" @click="homepage">Home</ion-buttons>
         </div>
         <div class="icon-wrapper">
           <ion-icon class="icon-link" src="/assets/icons/chicken.svg"></ion-icon>
-          <ion-menu-toggle>
-              <ion-buttons class="menu-link" id="active" router-link="/order">Order Now!</ion-buttons>
-          </ion-menu-toggle>          
+            <ion-buttons class="menu-link" @click="orderpage">Order Now!</ion-buttons>
         </div>
-
         <div class="icon-wrapper">
           <ion-icon class="icon-link" src="/assets/icons/bell.svg"></ion-icon>
           <div class="wrapper">
-            <ion-menu-toggle>
-              <ion-buttons class="menu-link">Notifications</ion-buttons>
-            </ion-menu-toggle>
+            <ion-buttons class="menu-link">Notifications</ion-buttons>
             <p class="count">4</p>
           </div>          
         </div>
-
         <div class="icon-wrapper">
           <ion-icon class="icon-link" src="/assets/icons/pin.svg"></ion-icon>
-          <ion-menu-toggle>
-              <ion-buttons class="menu-link">Store Locator</ion-buttons>
-          </ion-menu-toggle>
+            <ion-buttons class="menu-link">Store Locator</ion-buttons>
         </div>
-
         <div class="icon-wrapper">
           <ion-icon class="icon-link" src="/assets/icons/question-mark.svg"></ion-icon>
-          <ion-menu-toggle>
-              <ion-buttons class="menu-link">FAQ's</ion-buttons>
-          </ion-menu-toggle>
+            <ion-buttons class="menu-link">FAQ's</ion-buttons>
         </div>
 
         <div class="link-separator"></div>
@@ -70,39 +52,29 @@
         <div class="icon-wrapper">
           <ion-icon class="icon-link" src="/assets/icons/cart.svg"></ion-icon>
           <div class="wrapper">
-            <ion-menu-toggle>
-              <ion-buttons class="menu-link">My Orders</ion-buttons>
-            </ion-menu-toggle>
+            <ion-buttons class="menu-link">My Orders</ion-buttons>
             <p class="count">2</p>          
           </div>
         </div>
 
         <div class="icon-wrapper">
           <ion-icon class="icon-link" src="/assets/icons/profile.svg"></ion-icon>
-          <ion-menu-toggle>
-              <ion-buttons class="menu-link">My Account</ion-buttons>
-          </ion-menu-toggle>
+          <ion-buttons class="menu-link">My Account</ion-buttons>
         </div>
 
         <div class="icon-wrapper">
           <ion-icon class="icon-link" src="/assets/icons/heart.svg"></ion-icon>
-          <ion-menu-toggle>
-              <ion-buttons class="menu-link">My Favorites</ion-buttons>
-          </ion-menu-toggle>
+          <ion-buttons class="menu-link">My Favorites</ion-buttons>
         </div>
 
         <div class="icon-wrapper">
           <ion-icon class="icon-link" src="/assets/icons/pin.svg"></ion-icon>
-          <ion-menu-toggle>
-              <ion-buttons class="menu-link">Order Tracker</ion-buttons>
-          </ion-menu-toggle>
+          <ion-buttons class="menu-link">Order Tracker</ion-buttons>
         </div>
 
         <div class="icon-wrapper">
           <ion-icon class="icon-link" src="/assets/icons/history.svg"></ion-icon>
-          <ion-menu-toggle>
-              <ion-buttons class="menu-link">Order History</ion-buttons>
-          </ion-menu-toggle>
+          <ion-buttons class="menu-link">Order History</ion-buttons>
         </div>
         <ion-button class="logout-btn">Log Out</ion-button>
       </ion-content>
@@ -135,8 +107,8 @@
               <ion-card @click="detailpage">
                 <ion-img src="/assets/images/ramen.png"></ion-img>
                 <ion-card-header>
+                  <ion-card-title class="card-title">Kur Ramen</ion-card-title>
                   <ion-card-subtitle class="card-subtitle">Meat</ion-card-subtitle>
-                  <ion-card-title class="card-title">Ramen</ion-card-title>
                 </ion-card-header>
                 <div class="price-wrapper">
                   <p class="price">P 175</p>
@@ -149,8 +121,8 @@
               <ion-card>
                 <ion-img src="/assets/images/Curry.png"></ion-img>
                 <ion-card-header>
-                  <ion-card-subtitle class="card-subtitle">Meat</ion-card-subtitle>
                   <ion-card-title class="card-title">Beef Curry</ion-card-title>
+                  <ion-card-subtitle class="card-subtitle">Meat</ion-card-subtitle>
                 </ion-card-header>
                 <div class="price-wrapper">
                   <p class="price">P 145</p>
@@ -163,8 +135,8 @@
               <ion-card>
                 <ion-img src="/assets/images/chicken-ramen.png"></ion-img>
                 <ion-card-header>
-                  <ion-card-subtitle class="card-subtitle">Meat</ion-card-subtitle>
                   <ion-card-title class="card-title">Chicken Ramen</ion-card-title>
+                  <ion-card-subtitle class="card-subtitle">Meat</ion-card-subtitle>
                 </ion-card-header>
                 <div class="price-wrapper">
                   <p class="price">P 115</p>
@@ -177,11 +149,11 @@
               <ion-card>
                 <ion-img src="/assets/images/shrimp-noodles.png"></ion-img>
                 <ion-card-header>
-                  <ion-card-subtitle class="card-subtitle">Seafoods</ion-card-subtitle>
                   <ion-card-title class="card-title">Shrimp Noodles</ion-card-title>
+                  <ion-card-subtitle class="card-subtitle">Seafoods</ion-card-subtitle>
                 </ion-card-header>
                 <div class="price-wrapper">
-                  <p class="price">P 175</p>
+                  <p class="price">P 165</p>
                   <ion-icon class="rating" src="https://upload.wikimedia.org/wikipedia/commons/4/47/Rating_stars_4.5.svg"></ion-icon>
                 </div>
               </ion-card>
@@ -189,13 +161,13 @@
 
             <ion-col size="6">
               <ion-card>
-                <ion-img src="/assets/images/shrimp-noodles.png"></ion-img>
+                <ion-img src="/assets/images/broth-ramen.png"></ion-img>
                 <ion-card-header>
-                  <ion-card-subtitle class="card-subtitle">Seafoods</ion-card-subtitle>
-                  <ion-card-title class="card-title">Shrimp Noodles</ion-card-title>
+                  <ion-card-title class="card-title">Kani Ramen</ion-card-title>
+                  <ion-card-subtitle class="card-subtitle">Mix</ion-card-subtitle>
                 </ion-card-header>
                 <div class="price-wrapper">
-                  <p class="price">P 175</p>
+                  <p class="price">P 225</p>
                   <ion-icon class="rating" src="https://upload.wikimedia.org/wikipedia/commons/4/47/Rating_stars_4.5.svg"></ion-icon>
                 </div>
               </ion-card>
@@ -203,13 +175,13 @@
 
             <ion-col size="6">
               <ion-card>
-                <ion-img src="/assets/images/shrimp-noodles.png"></ion-img>
+                <ion-img src="/assets/images/egg-ramen.png"></ion-img>
                 <ion-card-header>
-                  <ion-card-subtitle class="card-subtitle">Seafoods</ion-card-subtitle>
-                  <ion-card-title class="card-title">Shrimp Noodles</ion-card-title>
+                  <ion-card-title class="card-title">Egg Ramen</ion-card-title>
+                  <ion-card-subtitle class="card-subtitle">Egg</ion-card-subtitle>
                 </ion-card-header>
                 <div class="price-wrapper">
-                  <p class="price">P 175</p>
+                  <p class="price">P 205</p>
                   <ion-icon class="rating" src="https://upload.wikimedia.org/wikipedia/commons/4/47/Rating_stars_4.5.svg"></ion-icon>
                 </div>
               </ion-card>
@@ -217,13 +189,13 @@
 
             <ion-col size="6">
               <ion-card>
-                <ion-img src="/assets/images/shrimp-noodles.png"></ion-img>
+                <ion-img src="/assets/images/katsu-ramen.png"></ion-img>
                 <ion-card-header>
-                  <ion-card-subtitle class="card-subtitle">Seafoods</ion-card-subtitle>
-                  <ion-card-title class="card-title">Shrimp Noodles</ion-card-title>
+                  <ion-card-title class="card-title">Katsu Ramen</ion-card-title>
+                  <ion-card-subtitle class="card-subtitle">Meat</ion-card-subtitle>
                 </ion-card-header>
                 <div class="price-wrapper">
-                  <p class="price">P 175</p>
+                  <p class="price">P 161</p>
                   <ion-icon class="rating" src="https://upload.wikimedia.org/wikipedia/commons/4/47/Rating_stars_4.5.svg"></ion-icon>
                 </div>
               </ion-card>
@@ -231,13 +203,13 @@
 
             <ion-col size="6">
               <ion-card>
-                <ion-img src="/assets/images/shrimp-noodles.png"></ion-img>
+                <ion-img src="/assets/images/nori-ramen.png"></ion-img>
                 <ion-card-header>
-                  <ion-card-subtitle class="card-subtitle">Seasssfoods</ion-card-subtitle>
-                  <ion-card-title class="card-title">Shrimp Noodles</ion-card-title>
+                  <ion-card-title class="card-title">Norie Ramen</ion-card-title>
+                  <ion-card-subtitle class="card-subtitle">Meat</ion-card-subtitle>
                 </ion-card-header>
                 <div class="price-wrapper">
-                  <p class="price">P 175</p>
+                  <p class="price">P 189</p>
                   <ion-icon class="rating" src="https://upload.wikimedia.org/wikipedia/commons/4/47/Rating_stars_4.5.svg"></ion-icon>
                 </div>
               </ion-card>
@@ -286,12 +258,20 @@
       const router = useRoute();
       const ionRouter = useIonRouter();
 
+      const homepage = () => {
+        ionRouter.push('/');
+      }
+      const loyaltypage = () => {
+        ionRouter.push('/loyalty-points', 'forward');
+      }
       const detailpage = () => {
         ionRouter.push('/order/details', 'forward', 'replace');
       }
 
       return {
         router,
+        homepage,
+        loyaltypage,
         detailpage
       };
     },
@@ -363,10 +343,6 @@ ion-card{
   padding: 10px 0;
   font-size:20px;
 }
-.active{
-  background-color:red;
-  color:red;
-}
 .icon-wrapper{
   margin-left:10px;
   display:flex;
@@ -401,7 +377,7 @@ ion-card{
 }
 .logout-btn{
   margin: 5px;
-  --background: rgb(211, 8, 8);
+  --background: rgb(218, 59, 59);
   --color: white;
   --border-radius: 20px;
   --padding: 5px 0;
@@ -433,7 +409,7 @@ ion-card{
   gap: 2px;
 }
 .reward-all{
-  --background: red;
+  --background: rgb(218, 59, 59);
   color: white;
 }
 .order-detail{
@@ -445,9 +421,11 @@ ion-card{
 }
 .card-title{
   font-size:20px;
+  font-weight:bold;
 }
 .card-subtitle{
-  font-size: 10px;
+  font-size: 13px;
+  font-weight: bold;
   color:rgb(72, 72, 72);
 }
 .price-wrapper{
@@ -457,7 +435,9 @@ ion-card{
   padding:10px;
 }
 .price{
-  color:red;
+  color:rgb(218, 59, 59);
+  font-size:20px;
+  font-weight: bold;
 }
 .rating{
   font-size:4.5rem;
