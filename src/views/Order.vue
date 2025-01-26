@@ -233,7 +233,7 @@
               <ion-card>
                 <ion-img src="/assets/images/shrimp-noodles.png"></ion-img>
                 <ion-card-header>
-                  <ion-card-subtitle class="card-subtitle">Seafoods</ion-card-subtitle>
+                  <ion-card-subtitle class="card-subtitle">Seasssfoods</ion-card-subtitle>
                   <ion-card-title class="card-title">Shrimp Noodles</ion-card-title>
                 </ion-card-header>
                 <div class="price-wrapper">
@@ -287,7 +287,7 @@
       const ionRouter = useIonRouter();
 
       const detailpage = () => {
-        ionRouter.push('/order/details');
+        ionRouter.push('/order/details', 'forward', 'replace');
       }
 
       return {

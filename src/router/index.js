@@ -3,6 +3,7 @@ import Home from '@/views/index.vue';
 import Order from '@/views/Order.vue';
 import Loyalty from '@/views/loyalty.vue';
 import Details from '@/views/food-detail.vue';
+import Summary from '@/views/checkout-detail.vue';
 const routes = [
   {
     path: "/",
@@ -23,6 +24,10 @@ const routes = [
     path: "/order/details",
     name: "Details",
     component: Details,
+  },
+  {
+    path: "/order/summary",
+    component: Summary,
   },
 ];
 
