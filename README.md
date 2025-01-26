@@ -1,4 +1,4 @@
-# MobileApp with the use of Ionic, Capacitor, and Vue js.
+# MobileApp with the use of [Ionic], [Capacitor], and [Vue js].
 
 ## Table of Contents
 - [About](#about)
