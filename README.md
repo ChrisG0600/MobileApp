@@ -35,7 +35,7 @@ You can use either on Web App or an Emulator:
 - Web App
    - ionic serve
 - Emulator
-   - ionic cap run (ios | android) -l --external
+   - ionic cap run (ios or android) -l --external
 
 ## Technologies Used
 - Ionic Framework: for building UI components on native platforms.
